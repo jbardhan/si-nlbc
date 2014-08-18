@@ -1,0 +1,278 @@
+Info) VMD for MACOSXX86, version 1.9.1beta1 (December 29, 2011)
+Info) http://www.ks.uiuc.edu/Research/vmd/                         
+Info) Email questions and bug reports to vmd@ks.uiuc.edu           
+Info) Please include this reference in published work using VMD:   
+Info)    Humphrey, W., Dalke, A. and Schulten, K., `VMD - Visual   
+Info)    Molecular Dynamics', J. Molec. Graphics 1996, 14.1, 33-38.
+Info) -------------------------------------------------------------
+Info) Multithreading available, 4 CPUs detected.
+Warning) Detected a mismatch between CUDA runtime and GPU driver
+Warning) Check to make sure that GPU drivers are up to date.
+Info) No CUDA accelerator devices available.
+Info) Dynamically loaded 2 plugins in directory:
+Info) /Applications/VMD 1.9.1.app/Contents/vmd/plugins/MACOSXX86/molfile
+{/Applications/VMD 1.9.1.app/Contents/vmd/scripts/tcl8.5} {/Applications/VMD 1.9.1.app/Contents/vmd/scripts} {/Applications/VMD 1.9.1.app/Contents/Resources/VMD.app/Contents/lib} /Applications/VMD 1.9.1.app/Contents/vmd/../Frameworks/Tcl.framework/Versions/8.5/Resources/Scripts ~/Library/Tcl /Library/Tcl /Network/Library/Tcl /System/Library/Tcl ~/Library/Frameworks /Library/Frameworks /Network/Library/Frameworks /System/Library/Frameworks {/Applications/VMD 1.9.1.app/Contents/vmd/scripts/vmd} {/Applications/VMD 1.9.1.app/Contents/vmd/plugins/MACOSXX86/tcl} {/Applications/VMD 1.9.1.app/Contents/vmd/plugins/noarch/tcl} /Users/jbardhan/software/vmd/la1.0
+{/Applications/VMD 1.9.1.app/Contents/vmd/scripts/tcl8.5} {/Applications/VMD 1.9.1.app/Contents/vmd/scripts} {/Applications/VMD 1.9.1.app/Contents/Resources/VMD.app/Contents/lib} /Applications/VMD 1.9.1.app/Contents/vmd/../Frameworks/Tcl.framework/Versions/8.5/Resources/Scripts ~/Library/Tcl /Library/Tcl /Network/Library/Tcl /System/Library/Tcl ~/Library/Frameworks /Library/Frameworks /Network/Library/Frameworks /System/Library/Frameworks {/Applications/VMD 1.9.1.app/Contents/vmd/scripts/vmd} {/Applications/VMD 1.9.1.app/Contents/vmd/plugins/MACOSXX86/tcl} {/Applications/VMD 1.9.1.app/Contents/vmd/plugins/noarch/tcl} /Users/jbardhan/software/vmd/la1.0 /Users/jbardhan/software/vmd/orient
+Info) Using plugin pdb for structure file glu.pdb
+Info) Using plugin pdb for coordinates from file glu.pdb
+Info) Determining bond structure from distance search ...
+Info) Analyzing structure ...
+Info)    Atoms: 15
+Info)    Bonds: 14
+Info)    Angles: 0  Dihedrals: 0  Impropers: 0  Cross-terms: 0
+Info)    Bondtypes: 0  Angletypes: 0  Dihedraltypes: 0  Impropertypes: 0
+Info)    Residues: 1
+Info)    Waters: 0
+Info)    Segments: 1
+Info)    Fragments: 1   Protein: 1   Nucleic: 0
+Info) Finished with coordinate file glu.pdb.
+0
+1.5.0
+reading topology file /Users/jbardhan/Parameters/top_all27_prot_lipid_more.rtf
+
+> CHARMM22 All-Hydrogen Topology File for Proteins and Lipids <<
+>>>>>> Includes phi, psi cross term map (CMAP) correction <<<<<<
+>>>>>>>>>>>>>>>>>>>>>>   July 2004    <<<<<<<<<<<<<<<<<<<<<<<<<<
+ All comments to ADM jr. via the CHARMM web site: www.charmm.org
+               parameter set discussion forum
+
+Created by CHARMM version 31 1
+cross-term entries present in topology definitions
+reading topology file top_titr.inp
+
+ Topology for different protonation states of residues
+Created by CHARMM version 27 1
+aliasing residue GLU atom H to HN
+aliasing residue GLU atom HB2 to HB1
+aliasing residue GLU atom HB3 to HB2
+aliasing residue GLU atom HG2 to HG1
+aliasing residue GLU atom HG3 to HG2
+building segment A
+reading residues from pdb file glu.pdb
+extracted 1 residues from pdb file
+mutating residue 2 from GLU to JE2
+setting patch for first residue to ACE
+setting patch for last residue to CT3
+Info: generating structure...
+Info: skipping bond C-N at beginning of segment.
+Info: skipping improper C-CA-N-O at beginning of segment.
+Info: skipping improper N-C-CA-HN at beginning of segment.
+Info: skipping cross-term C-N-CA-C-N-CA-C-N at beginning of segment.
+Info: skipping conformation CA-C-N-CA at beginning of segment.
+Info: skipping conformation N-CA-C-O at beginning of segment.
+Info: skipping conformation N-CA-C-N at beginning of segment.
+Info: skipping conformation C-N-CA-C at beginning of segment.
+Info: skipping conformation C-CA-N-HN at beginning of segment.
+Info: segment complete.
+reading coordinates from pdb file glu.pdb for segment A
+Info: guessing coordinates for 12 atoms (5 non-hydrogen)
+Warning: poorly guessed coordinates for 12 atoms (5 non-hydrogen):
+Warning: poorly guessed coordinate for atom NT	 JE2:2	  A
+Warning: poorly guessed coordinate for atom HNT	 JE2:2	  A
+Warning: poorly guessed coordinate for atom CAT	 JE2:2	  A
+Warning: poorly guessed coordinate for atom HT1	 JE2:2	  A
+Warning: poorly guessed coordinate for atom HT2	 JE2:2	  A
+Warning: poorly guessed coordinate for atom HT3	 JE2:2	  A
+Warning: poorly guessed coordinate for atom CAY	 JE2:2	  A
+Warning: poorly guessed coordinate for atom HY1	 JE2:2	  A
+Warning: poorly guessed coordinate for atom HY2	 JE2:2	  A
+Warning: poorly guessed coordinate for atom HY3	 JE2:2	  A
+Warning: poorly guessed coordinate for atom CY	 JE2:2	  A
+Warning: poorly guessed coordinate for atom OY	 JE2:2	  A
+Info: writing psf file glu_capped.psf
+total of 27 atoms
+total of 26 bonds
+total of 45 angles
+total of 56 dihedrals
+total of 5 impropers
+total of 0 cross-terms
+Info: psf file complete.
+Info: writing pdb file glu_capped.pdb
+Info: Atoms with guessed coordinates will have occupancy of 0.0.
+Info: pdb file complete.
+1.0
+A:2 
+A:2 
+Info) Using plugin pdb for structure file glu_capped.pdb
+Info) Using plugin pdb for coordinates from file glu_capped.pdb
+Info) Determining bond structure from distance search ...
+Info) Analyzing structure ...
+Info)    Atoms: 27
+Info)    Bonds: 32
+Info)    Angles: 0  Dihedrals: 0  Impropers: 0  Cross-terms: 0
+Info)    Bondtypes: 0  Angletypes: 0  Dihedraltypes: 0  Impropertypes: 0
+Info)    Residues: 1
+Info)    Waters: 0
+Info)    Segments: 1
+Info)    Fragments: 1   Protein: 1   Nucleic: 0
+Info) Finished with coordinate file glu_capped.pdb.
+1
+atomselect0
+Calculating principal axes.
+Getting the center-of-mass...
+Total weight: 201.1998221874237
+Computing the inertia tensor...
+Drawing the principal components...
+Total weight: 201.1998221874237
+cone {0.6252029798435363 0.17595324999978523 -5.162839119756269} {0.6942996255745537 0.357868623536028 -6.163004331115759} radius 0.2547300040721894
+cone {4.379741469053312 -0.07297746450780512 -0.7966267772995568} {5.387472737086773 0.046705230401540065 -0.7052389030448686} radius 0.2547300040721894
+cone {-0.18636722869366995 3.429810760464562 -0.47497168506796994} {-0.32016313509695415 4.425190511616998 -0.3031700377553851} radius 0.2547300040721894
+{0.06781361110432409 0.17853744222126344 -0.9815934473467518} {0.9890190122125098 0.11746034330081086 0.08969092057642852} {-0.13131149085736193 0.9768968468967154 0.1686115147078405}
+Total weight: 201.1998221874237
+{0.9852451682090759 0.10976938903331757 0.13131149113178253 0.2183147817850113} {0.10976938903331757 0.18336640298366547 -0.9768968820571899 -1.6241611242294312} {-0.13131149113178253 0.9768968820571899 0.1686115264892578 -0.3814559578895569} {0.0 0.0 0.0 1.0}
+Calculating principal axes.
+Getting the center-of-mass...
+Total weight: 201.1998221874237
+Computing the inertia tensor...
+Drawing the principal components...
+Total weight: 201.1998221874237
+cone {0.522944080318515 -4.646720658960404 -1.1621782349545107} {0.5664759939340127 -5.670473772922065 -1.1621782257302253} radius 0.2561695563793182
+cone {4.443828881703172 -0.3775805486517646 -1.1621782320221723} {5.467581995664833 -0.33404863503626686 -1.1621782220648025} radius 0.2561695563793182
+cone {0.34881638449548413 -0.5517081679420219 2.936534630217439} {0.34881637415522415 -0.5517081591490884 3.961212855734712} radius 0.2561695563793182
+{0.04248349631272997 -0.9990971687183614 9.002128770314817e-9} {0.9990971687183614 0.042483496312730004 9.717557823968054e-9} {-1.0091226413203836e-8 8.581165534876349e-9 1.0}
+Total weight: 201.1998221874237
+{0.04248353838920593 -0.9990971684455872 -5.863097871678733e-17 -0.21721264719963074} {0.9990971684455872 0.04248353838920593 6.117706049456025e-17 -0.8767712116241455} {-5.863097871678733e-17 -6.117706049456025e-17 1.0 0.0} {0.0 0.0 0.0 1.0}
+Calculating principal axes.
+Getting the center-of-mass...
+Total weight: 201.1998221874237
+Computing the inertia tensor...
+Drawing the principal components...
+Total weight: 201.1998221874237
+cone {4.447529314215782 -0.5517085224566403 -1.1621782282955035} {5.472207539733052 -0.5517085946439333 -1.1621782174064663} radius 0.2561695563793182
+cone {0.34881670089587297 3.5470046683616125 -1.1621782185779772} {0.3488167730831659 4.571682893878883 -1.1621782052595584} radius 0.2561695563793182
+cone {0.34881636859054893 -0.5517082869811403 2.936534630217439} {0.34881635770151087 -0.5517083002995582 3.9612128557347113} radius 0.2561695563793182
+{0.9999999999999973 -7.044874302109909e-8 1.06267868779794e-8} {7.044874297448952e-8 0.9999999999999974 1.2997659564451315e-8} {-1.0626787793648164e-8 -1.2997658815807511e-8 0.9999999999999999}
+{-1.019112229347229 -2.8520610332489014 -5.027731418609619} {2.444838285446167 2.49068021774292 2.291398763656616}
+-1.019112229347229 -2.8520610332489014 -5.027731418609619
+2.444838285446167 2.49068021774292 2.291398763656616
+0.712863028049469
+-0.18069040775299072
+-1.3681663274765015
+0.712863028049469 -0.18069040775299072 -1.3681663274765015
+Info) Opened coordinate file glu_capped.pdb for writing.
+Info) Finished with coordinate file glu_capped.pdb.
+1.4
+Info) generating solute plus one replica of water...
+reading structure from psf file glu_capped.psf
+psf file does not contain cross-terms
+reading coordinates from pdb file glu_capped.pdb
+reading structure from psf file /Applications/VMD 1.9.1.app/Contents/vmd/plugins/noarch/tcl/solvate1.4/wat.psf
+psf file does not contain cross-terms
+reading coordinates from pdb file /Applications/VMD 1.9.1.app/Contents/vmd/plugins/noarch/tcl/solvate1.4/wat.pdb
+Info: writing psf file combine.psf
+total of 27810 atoms
+total of 18548 bonds
+total of 18567 angles
+total of 56 dihedrals
+total of 5 impropers
+total of 0 cross-terms
+Info: psf file complete.
+Info: writing pdb file combine.pdb
+Info: pdb file complete.
+Info) Using plugin psf for structure file combine.psf
+psfplugin) no cross-terms defined in PSF file.
+Info) Analyzing structure ...
+Info)    Atoms: 27810
+Info)    Bonds: 18548
+Info)    Angles: 18567  Dihedrals: 56  Impropers: 5  Cross-terms: 0
+Info)    Bondtypes: 0  Angletypes: 0  Dihedraltypes: 0  Impropertypes: 0
+Info)    Residues: 9262
+Info)    Waters: 9261
+Info)    Segments: 2
+Info)    Fragments: 9262   Protein: 1   Nucleic: 0
+Info) Using plugin pdb for coordinates from file combine.pdb
+Info) Finished with coordinate file combine.pdb.
+Info) generating water residue lists...
+Info) single water residue type, creating residue list...
+Info) replicating 1 water segments, 1 by 1 by 1
+reading topology file /Applications/VMD 1.9.1.app/Contents/vmd/plugins/noarch/tcl/solvate1.4/wat.top
+
+>>>>>> Combined CHARMM All-Hydrogen Topology File for <<<<<<<<<
+>>>>>>>>> CHARMM22 Proteins and CHARMM27 Lipids <<<<<<<<<<
+from
+>>>>>>>>CHARMM22 All-Hydrogen Topology File for Proteins <<<<<<
+>>>>>>>>>>>>>>>>>>>>> August 1999 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>> Direct comments to Alexander D. MacKerell Jr. <<<<<<<<<
+>>>>>> 410-706-7442 or email: alex,mmiris.ab.umd.edu  <<<<<<<<<
+and
+  \\\\\\\ CHARMM27 All-Hydrogen Lipid Topology File ///////
+  \\\\\\\\\\\\\\\\\\ Developmental /////////////////////////
+		Alexander D. MacKerell Jr.
+			August 1999
+ All comments to ADM jr.  email: alex,mmiris.ab.umd.edu
+		telephone: 410-706-7442
+
+Created by CHARMM version 27 1
+building segment WT1
+setting patch for first residue to NONE
+setting patch for last residue to NONE
+Info: generating structure...
+Info: segment complete.
+Info: writing psf file glu_solvated.psf
+total of 5904 atoms
+total of 3944 bonds
+total of 2004 angles
+total of 56 dihedrals
+total of 5 impropers
+total of 0 cross-terms
+Info: psf file complete.
+Info: writing pdb file glu_solvated.pdb
+Info: pdb file complete.
+clearing structure, preserving topology and aliases
+Info) Using plugin psf for structure file glu_solvated.psf
+psfplugin) no cross-terms defined in PSF file.
+Info) Analyzing structure ...
+Info)    Atoms: 5904
+Info)    Bonds: 3944
+Info)    Angles: 2004  Dihedrals: 56  Impropers: 5  Cross-terms: 0
+Info)    Bondtypes: 0  Angletypes: 0  Dihedraltypes: 0  Impropertypes: 0
+Info)    Residues: 1960
+Info)    Waters: 1959
+Info)    Segments: 2
+Info)    Fragments: 1960   Protein: 1   Nucleic: 0
+Info) Using plugin pdb for coordinates from file glu_solvated.pdb
+Info) Finished with coordinate file glu_solvated.pdb.
+Info) Opened coordinate file glu_solvated.pdb for writing.
+Info) Finished with coordinate file glu_solvated.pdb.
+Info) Extra structure overlap safety check...
+Info) Solvate 1.3 completed successfully.
+Info) Using plugin pdb for structure file glu_capped.pdb
+Info) Using plugin pdb for coordinates from file glu_capped.pdb
+Info) Determining bond structure from distance search ...
+Info) Analyzing structure ...
+Info)    Atoms: 27
+Info)    Bonds: 32
+Info)    Angles: 0  Dihedrals: 0  Impropers: 0  Cross-terms: 0
+Info)    Bondtypes: 0  Angletypes: 0  Dihedraltypes: 0  Impropertypes: 0
+Info)    Residues: 1
+Info)    Waters: 0
+Info)    Segments: 1
+Info)    Fragments: 1   Protein: 1   Nucleic: 0
+Info) Finished with coordinate file glu_capped.pdb.
+4
+atomselect6
+Info) Using plugin pdb for structure file glu_solvated.pdb
+Info) Using plugin pdb for coordinates from file glu_solvated.pdb
+Info) Determining bond structure from distance search ...
+Info) Analyzing structure ...
+Info)    Atoms: 5904
+Info)    Bonds: 3950
+Info)    Angles: 0  Dihedrals: 0  Impropers: 0  Cross-terms: 0
+Info)    Bondtypes: 0  Angletypes: 0  Dihedraltypes: 0  Impropertypes: 0
+Info)    Residues: 1960
+Info)    Waters: 1959
+Info)    Segments: 2
+Info)    Fragments: 1960   Protein: 1   Nucleic: 0
+Info) Finished with coordinate file glu_solvated.pdb.
+5
+atomselect7
+atomselect8
+Info) Opened coordinate file glu_solvated.pdb for writing.
+Info) Finished with coordinate file glu_solvated.pdb.
+file7
+{-19.99799919128418 -19.94099998474121 -19.961000442504883} {19.974000930786133 20.0 19.974000930786133}
+-19.99799919128418 -19.94099998474121 -19.961000442504883
+19.974000930786133 20.0 19.974000930786133
+Info) VMD for MACOSXX86, version 1.9.1beta1 (December 29, 2011)
+Info) Exiting normally.
+vmd > 

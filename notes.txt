@@ -1,0 +1,250 @@
+pointbem: Matlab files needed to run the NLBC model.
+
+DRIVER testSrfOnSurfacePoints.m: This script tests the point BEM
+discretization using random charge distributions inside spherical
+solutes (6 Angstrom radius -- the triangular meshes stored in the
+geometry/ subdirectory).  You can verify convergence by changing how
+fine a mesh you use (see vdens when specifying the srfFile).
+
+DRIVER testpoint.m: Similar to testSrfOnSurfacePoints, this tests the
+simple spherical quadrature pointBEM against analytical results.
+
+Auxiliary functions:
+
+calcp.m: File courtesy of Prof. Jacob K. White (MIT).  Computes
+triangle area, normal, centroid, single- and double-layer potentials,
+and their gradients at a set of points due to a uniform single/double
+layer charge on the triangle.  Used by genmeshcolloc.m
+
+computeBnm_exact.m: if you want to solve analytical Poisson problems
+for charges in a sphere, this sets up the Bnm multipole coefficients
+for the reaction potential, following Kirkwood (1934). Called by
+doAnalytical.m
+
+computeEnm.m: if you want to solve analytical Poisson problems in a
+sphere, this sets up the multipole expansions for the charge
+distribution, following Kirkwood (1934). Called by doAnalytical.m
+
+computePot.m: Converts Kirkwood Bnm reaction-potential expansion
+coefficients into actual potentials at points in space.  Called by
+doAnalytical.m.
+
+convertToSph.m: Converts a set of points in Cartesian space (each
+point is assumed to be a row vector!) into their spherical
+coordinates. Called by computeEnm.m and computePot.m.
+
+doAnalytical.m: Solves the Kirkwood problem for non-ionic solutions
+(i.e. ionic strength = zero).  Called by testSrfOnSurfacePoints.m and
+testpoint.m.
+
+genPointMatrices.m: generates the single and double-layer
+boundary-integral operators assuming point discretization of the
+surface.  Called by makeSphereOperators.m and
+makeSurfaceToSurfaceOperators.m.
+
+genmeshcolloc.m: takes meshData (a set of faces and vertices) and
+computes collocation points (triangle centroids), normals, and areas.
+In point BEM most of this functionality isn't used, but the function
+is called by genmeshcolloc.m and loadSrfIntoSurfacePoints.m.
+
+geometry: subdirectory holding boundary-element meshes for a
+6-Angstrom sphere.  Used by testSrfOnSurfacePoints.m
+
+getSphPoints.m: easy, fast way to get a point discretization of a
+surface for an arbitrary number of points, with quadrature weights and
+normals.  See Park, Bardhan, Makowski, and Roux (JChemPhys 2009) for
+more details.  Called by makeSphereOperators.m and makeSphereSurface.m
+
+loadConstants.m: sets important physical constants.  Called by most
+drivers.
+
+loadSrfIntoSurfacePoints.m: Takes a triangular mesh (in .srf format
+from FFTSVD codebase) and turns it into a point BEM discretization for
+the present solver.  Called by most drivers.
+
+makeBemMatrices.m: Takes a point BEM discretization, PQR data, and the
+relevant surface-related operators, and returns the appropriate
+ASC/PCM/ICC matrices A, B, and C (see other papers by Bardhan).  The
+reaction potential matrix is proportional to C A^{-1} B.  Called by
+most drivers.
+
+makeSphereChargeDistributions.m: assuming that a sphere is centered at
+the origin, it takes a sphere radius, a number of charges, the grid
+size for a Cartesian grid, and the minimum distance between a charge
+and the sphere surface, and returns a random charge distribution
+composed of the given number of charges, where each charge is on the
+grid and has a magnitude drawn from a uniform distribution between
+[-maxChargeValue, +maxChargeValue].  (Default maxChargeValue is 0.85).
+Called by testSrfOnSurfacePoints.m and testpoint.m.
+
+makeSphereSurface.m: returns point-BEM surface discretization for a
+sphere centered at given origin, with given radius, and number of
+points on the surface.  (Thus, this and loadSrfIntoSurfacePoints can
+be compared against each other, as both return the same data
+structure.)  Called by testSrfOnSurfacePoints.m, testpoint.m, and
+testIonRadiusFunction.m.
+
+makeSurfaceToChargeOperators.m: returns two matrices, the Coulomb
+potential operator from surface points at a set of evaluation points
+due to a monopole charge distribution on the surface, and the Coulomb
+potential due to a dipole charge distribution on the surface.  These
+are used to generate the adjoint operators that map from the molecular
+charges to the surface. Called by testSrfOnSurfacePoints.m,
+testpoint.m, compareRodsMobley08.m, compareToMobley08.m, testprot.m,
+and testIonRadiusFunction.m.
+
+makeSurfaceToSurfaceOperators.m: takes a point surface discretization
+and returns the single and double layer operators, as well as their
+eigendecompositions.  Called by most drivers.
+
+parsePQRentry.m: parses a single line from a PQR file into relevant
+fields.  Called by readpqr.m.
+
+readmesh.m: Reads a triangular mesh stored in FFTSVD format.  Does a
+little bit of cleaning.  Called by loadSrfIntoSurfacePoints.m.
+
+readpqr.m: Reads a PQR file into a PQR data structure, which may be
+useful to readers.  Many drivers use FFTSVD format (.PDB file and
+.CRG file).
+
+readsrf.m: Takes an FFTSVD triangular mesh stored as an .SRF file and
+reads the outer dielectric boundary.  The script does NOT handle
+cavities at the current time.  Called by loadSrfIntoSurfacePoints.m.
+
+testasymmetry/ directory: contains the drivers to test the NLBC model.
+
+DRIVER: testIonRadiusFunction.m: Runs BEM/NLBC for +/- 1e ions of
+varying radius and then generates Figure 1.
+
+DRIVER: testprot.m: Runs BEM/NLBC and BEM/symmetric for protonated and
+unprotonated residues. You can have it compute the results from PARSE
+radii (but still CHARMM charges) by subtituting "parse" for "roux" in
+surftype.
+
+DRIVER: plotprot.m: Run this after calling testprot.  It will generate
+Figure 2.
+
+DRIVER: compareRodsMobley08.m: Runs BEM / NLBC on the Mobley rod
+problems.
+
+DRIVER: plotRodsComparisonToMobley.m: Run this after calling
+compareRodsMobley08.  It will generate SI Figures 1 and 2.
+
+DRIVER: compareToMobley08.m: Runs BEM / NLBC on the Mobley bracelet
+problems.
+
+DRIVER: plotComparisonToMobley.m: Run this after calling
+compareToMobley08.m.  It will generate SI Figures 3 through 8.
+
+solveConsistentAsymmetric.m: this runs the Picard iteration (the max
+number of iterations is set inside).  Called by most drivers.
+
+calcAsymmetricPert.m: the NLBC leads to a diagonal modification of the
+BEM matrix.  This script returns that modification.  Called by
+solveConsistentAsymmetric.m.
+
+loadPdbAndCrg.m: Assembles a PQR-type data structure from PDB/CRG
+files. Called by most drivers.
+
+readCrg.m: Data format used by some PB solvers to specify atomic
+charge values different from in PDB. Called by loadPdbAndCrg.m.
+
+readPdb.m: Simple script to load PDB coordinates and other
+data. Called by loadPdbAndCrg.m.
+
+* testasymmetry/bracelet/ 
+* testasymmetry/residues/
+* testasymmetry/rod/
+===> hold surface meshes, PDB, CRG and other data to run BEM/NLBC.
+
+===============================================================
+
+asymmetricionsmd/ : MD free energy calculations for charging monatomic ions to +/- 1
+
+toppar/ : the latest topology and parameter files for ions from
+A. MacKerell Jr. website (because the present work used VMD/NAMD
+rather than charmm, the original file toppar_water_ions.str was split
+into two separate files).
+
+load*.m are simple copy-paste jobs that take the delta Gs for each FEP
+window and process them according to the net charge change in the
+simulation, given the box size.
+
+Each ion has:
+
+* equilNeg.namd
+* forwardNeg.namd 
+* backwardNeg.namd
+* negative.psf
+==> These equilibrate, charge the ion down to -1, and then discharge it back to 0.
+
+* equilPos.namd
+* forwardPos.namd 
+* backwardPos.namd
+* positive.psf
+==> These equilibrate, charge the ion up to +1, and then discharge it back to 0.
+
+* solvated.pdb
+* solvated.psf
+* solvated.fep
+* fixed.pdb
+==> These specify the system and fix the ion in place.
+
+output/ subdirectory contains the actual FEP output samples.
+
+===============================================================
+
+titration-md/ : MD free energy calculations of titratable residues
+
+top_all27_prot_lipid_more.rtf: standard CHARMM topology file
+
+top_titr.inp: topology file for protonated and unprotonated residues.
+See Supporting Information PDF for more information.
+
+
+(In the below, the "1" state always denotes a protonated form and the
+"0" denotes an unprotonated form.)
+jr1, jr2: Arginine
+jd1, jd2: Aspartic acid
+jc1, jc2: Cysteine
+je1, je2: Glutamic acid
+jh1, jh2: Histidine
+jk1, jk2: Lysine
+jy1, jy2: Tyrosine
+
+Each directory holds
+
+* runX.pml
+===> a PyMOL script to build the structure with the Nina et al. side-chain dihedrals
+
+* X.pdb
+===> output structure from running the PyMOL script
+
+* buildX.vmd
+===> VMD script to specify the protonation state, add neutral blocking groups, and solvate.
+
+* build.out
+* X_capped.pdb, X_capped.psf
+* X_solvated.pdb, X_solvated.psf
+===> outputs from running VMD.
+
+* X_boxinfo.txt
+===> gives details on the MD box size for needed net-charge corrections
+
+* fix.pdb
+===> specifies that the solute should be held rigid.
+
+* equilibration.namd
+* forward.namd
+* backward.namd
+===> the NAMD scripts for the equilibration and the FEP calculations (charging = forward; discharging = backward).
+
+* equil.fepout
+* forward.fepout
+* backward.fepout
+===> the output files from FEP.
+
+* equil.out
+* forward.out
+* backward.out
+===> NAMD output from the three runs

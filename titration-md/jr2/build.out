@@ -1,0 +1,273 @@
+Info) VMD for MACOSXX86, version 1.9.1beta1 (December 29, 2011)
+Info) http://www.ks.uiuc.edu/Research/vmd/                         
+Info) Email questions and bug reports to vmd@ks.uiuc.edu           
+Info) Please include this reference in published work using VMD:   
+Info)    Humphrey, W., Dalke, A. and Schulten, K., `VMD - Visual   
+Info)    Molecular Dynamics', J. Molec. Graphics 1996, 14.1, 33-38.
+Info) -------------------------------------------------------------
+Info) Multithreading available, 4 CPUs detected.
+Warning) Detected a mismatch between CUDA runtime and GPU driver
+Warning) Check to make sure that GPU drivers are up to date.
+Info) No CUDA accelerator devices available.
+Info) Dynamically loaded 2 plugins in directory:
+Info) /Applications/VMD 1.9.1.app/Contents/vmd/plugins/MACOSXX86/molfile
+{/Applications/VMD 1.9.1.app/Contents/vmd/scripts/tcl8.5} {/Applications/VMD 1.9.1.app/Contents/vmd/scripts} {/Applications/VMD 1.9.1.app/Contents/Resources/VMD.app/Contents/lib} /Applications/VMD 1.9.1.app/Contents/vmd/../Frameworks/Tcl.framework/Versions/8.5/Resources/Scripts ~/Library/Tcl /Library/Tcl /Network/Library/Tcl /System/Library/Tcl ~/Library/Frameworks /Library/Frameworks /Network/Library/Frameworks /System/Library/Frameworks {/Applications/VMD 1.9.1.app/Contents/vmd/scripts/vmd} {/Applications/VMD 1.9.1.app/Contents/vmd/plugins/MACOSXX86/tcl} {/Applications/VMD 1.9.1.app/Contents/vmd/plugins/noarch/tcl} /Users/jbardhan/software/vmd/la1.0
+{/Applications/VMD 1.9.1.app/Contents/vmd/scripts/tcl8.5} {/Applications/VMD 1.9.1.app/Contents/vmd/scripts} {/Applications/VMD 1.9.1.app/Contents/Resources/VMD.app/Contents/lib} /Applications/VMD 1.9.1.app/Contents/vmd/../Frameworks/Tcl.framework/Versions/8.5/Resources/Scripts ~/Library/Tcl /Library/Tcl /Network/Library/Tcl /System/Library/Tcl ~/Library/Frameworks /Library/Frameworks /Network/Library/Frameworks /System/Library/Frameworks {/Applications/VMD 1.9.1.app/Contents/vmd/scripts/vmd} {/Applications/VMD 1.9.1.app/Contents/vmd/plugins/MACOSXX86/tcl} {/Applications/VMD 1.9.1.app/Contents/vmd/plugins/noarch/tcl} /Users/jbardhan/software/vmd/la1.0 /Users/jbardhan/software/vmd/orient
+Info) Using plugin pdb for structure file arg.pdb
+Info) Using plugin pdb for coordinates from file arg.pdb
+Info) Determining bond structure from distance search ...
+Info) Analyzing structure ...
+Info)    Atoms: 24
+Info)    Bonds: 23
+Info)    Angles: 0  Dihedrals: 0  Impropers: 0  Cross-terms: 0
+Info)    Bondtypes: 0  Angletypes: 0  Dihedraltypes: 0  Impropertypes: 0
+Info)    Residues: 1
+Info)    Waters: 0
+Info)    Segments: 1
+Info)    Fragments: 1   Protein: 1   Nucleic: 0
+Info) Finished with coordinate file arg.pdb.
+0
+1.5.0
+reading topology file /Users/jbardhan/Parameters/top_all27_prot_lipid_more.rtf
+
+> CHARMM22 All-Hydrogen Topology File for Proteins and Lipids <<
+>>>>>> Includes phi, psi cross term map (CMAP) correction <<<<<<
+>>>>>>>>>>>>>>>>>>>>>>   July 2004    <<<<<<<<<<<<<<<<<<<<<<<<<<
+ All comments to ADM jr. via the CHARMM web site: www.charmm.org
+               parameter set discussion forum
+
+Created by CHARMM version 31 1
+cross-term entries present in topology definitions
+reading topology file top_titr.inp
+
+ Topology for different protonation states of residues
+Created by CHARMM version 27 1
+building segment A
+reading residues from pdb file arg.pdb
+extracted 1 residues from pdb file
+mutating residue 2 from ARG to JR2
+setting patch for first residue to ACE
+setting patch for last residue to CT3
+Info: generating structure...
+Info: skipping bond C-N at beginning of segment.
+Info: skipping improper C-CA-N-O at beginning of segment.
+Info: skipping improper N-C-CA-HN at beginning of segment.
+Info: skipping cross-term C-N-CA-C-N-CA-C-N at beginning of segment.
+Info: skipping conformation CA-C-N-CA at beginning of segment.
+Info: skipping conformation N-CA-C-O at beginning of segment.
+Info: skipping conformation N-CA-C-N at beginning of segment.
+Info: skipping conformation C-N-CA-C at beginning of segment.
+Info: skipping conformation C-CA-N-HN at beginning of segment.
+Info: segment complete.
+reading coordinates from pdb file arg.pdb for segment A
+Info: guessing coordinates for 12 atoms (5 non-hydrogen)
+Warning: poorly guessed coordinates for 12 atoms (5 non-hydrogen):
+Warning: poorly guessed coordinate for atom NT	 JR2:2	  A
+Warning: poorly guessed coordinate for atom HNT	 JR2:2	  A
+Warning: poorly guessed coordinate for atom CAT	 JR2:2	  A
+Warning: poorly guessed coordinate for atom HT1	 JR2:2	  A
+Warning: poorly guessed coordinate for atom HT2	 JR2:2	  A
+Warning: poorly guessed coordinate for atom HT3	 JR2:2	  A
+Warning: poorly guessed coordinate for atom CAY	 JR2:2	  A
+Warning: poorly guessed coordinate for atom HY1	 JR2:2	  A
+Warning: poorly guessed coordinate for atom HY2	 JR2:2	  A
+Warning: poorly guessed coordinate for atom HY3	 JR2:2	  A
+Warning: poorly guessed coordinate for atom CY	 JR2:2	  A
+Warning: poorly guessed coordinate for atom OY	 JR2:2	  A
+Info: writing psf file arg_capped.psf
+total of 36 atoms
+total of 35 bonds
+total of 60 angles
+total of 77 dihedrals
+total of 5 impropers
+total of 0 cross-terms
+Info: psf file complete.
+Info: writing pdb file arg_capped.pdb
+Info: Atoms with guessed coordinates will have occupancy of 0.0.
+Info: pdb file complete.
+1.0
+A:2 
+A:2 
+Info) Using plugin pdb for structure file arg_capped.pdb
+Info) Using plugin pdb for coordinates from file arg_capped.pdb
+Info) Determining bond structure from distance search ...
+Info) Analyzing structure ...
+Info)    Atoms: 36
+Info)    Bonds: 41
+Info)    Angles: 0  Dihedrals: 0  Impropers: 0  Cross-terms: 0
+Info)    Bondtypes: 0  Angletypes: 0  Dihedraltypes: 0  Impropertypes: 0
+Info)    Residues: 1
+Info)    Waters: 0
+Info)    Segments: 1
+Info)    Fragments: 1   Protein: 1   Nucleic: 0
+Info) Finished with coordinate file arg_capped.pdb.
+1
+atomselect0
+Calculating principal axes.
+Getting the center-of-mass...
+Total weight: 230.28740119934082
+Computing the inertia tensor...
+Drawing the principal components...
+Total weight: 230.28740119934082
+cone {2.196489739548579 -0.9197422439708665 5.206664680441266} {2.7590135748121103 -0.5828904828105608 5.963777753109246} radius 0.2503899931907654
+cone {1.4699367398561334 0.563185087388602 -0.2130182805686882} {1.8508223251965532 1.2707686813887746 -0.8108259481531954} radius 0.2503899931907654
+cone {-2.9973868017483576 0.22757707729225318 3.255454548718304} {-3.7333321018090597 0.8512586687683386 3.5247650884555446} radius 0.2503899931907654
+{0.561647680180014 0.3363271000447566 0.7559338364724077} {0.3802923396485674 0.7064815020992913 -0.5968765564135919} {-0.7347990335819906 0.6227101805551386 0.26889107698092035}
+Total weight: 230.28740119934082
+{0.574487030506134 0.3606036901473999 0.7347990274429321 -0.8058158755302429} {0.3606037199497223 0.6944040656089783 -0.6227101683616638 0.6828937530517578} {-0.7347990274429321 0.6227101683616638 0.2688910663127899 2.964898109436035} {0.0 0.0 0.0 1.0}
+Calculating principal axes.
+Getting the center-of-mass...
+Total weight: 230.28740119934082
+Computing the inertia tensor...
+Drawing the principal components...
+Total weight: 230.28740119934082
+cone {4.349853066825529 -2.419814357858279 2.178212569447106} {5.450717744694133 -2.4579806273929603 2.1782126042304193} radius 0.2753815197944641
+cone {0.099059433489839 2.1363094317548637 2.1782123129172306} {0.13722570302452103 3.237174109623468 2.178212283568075} radius 0.2753815197944641
+cone {-0.05360577963097899 -2.2671491575726574 6.584316747025275} {-0.05360581337650144 -2.267149127035933 7.68584282620313} radius 0.275381519794464
+{0.9993995591010013 -0.034648539200422 3.1577385054288154e-8} {0.03464853920042285 0.9993995591010015 -2.6644086149493286e-8} {-3.063524603740803e-8 2.7722198214353055e-8 0.9999999999999991}
+Total weight: 230.28740119934082
+{0.9993995428085327 -0.03464853763580322 4.797584551852196e-10 -0.07858559489250183} {0.03464853763580322 0.9993995428085327 -2.7682391490202463e-8 0.00049591064453125} {4.797584551852196e-10 2.7682391490202463e-8 1.0 0.0} {0.0 0.0 0.0 1.0}
+Calculating principal axes.
+Getting the center-of-mass...
+Total weight: 230.28740119934082
+Computing the inertia tensor...
+Drawing the principal components...
+Total weight: 230.28740119934082
+cone {4.352498663632716 -2.2671493990967773 2.1782125412684312} {5.454024742810571 -2.267149392273134 2.1782125784799446} radius 0.27538151979446407
+cone {-0.05360568037328084 2.1389548903200755 2.1782123763144514} {-0.053605687196924164 3.2404809694979315 2.17821237228747} radius 0.2753815197944641
+cone {-0.05360580192476082 -2.267149410283425 6.584316709133802} {-0.05360583913627414 -2.2671494062564435 7.685842788311657} radius 0.2753815197944641
+{0.9999999999999993 6.194717938750519e-9 3.378178147361434e-8} {-6.1947179042353985e-9 1.0 -3.6558205096305533e-9} {-3.3781781496261096e-8 3.655820300361943e-9 0.9999999999999994}
+{-2.5638937950134277 -5.509185314178467 -1.711348056793213} {2.3420801162719727 0.8037570118904114 6.156695365905762}
+-2.5638937950134277 -5.509185314178467 -1.711348056793213
+2.3420801162719727 0.8037570118904114 6.156695365905762
+-0.11090683937072754
+-2.3527141511440277
+2.2226736545562744
+-0.11090683937072754 -2.3527141511440277 2.2226736545562744
+Info) Opened coordinate file arg_capped.pdb for writing.
+Info) Finished with coordinate file arg_capped.pdb.
+1.4
+Info) generating solute plus one replica of water...
+reading structure from psf file arg_capped.psf
+psf file does not contain cross-terms
+reading coordinates from pdb file arg_capped.pdb
+reading structure from psf file /Applications/VMD 1.9.1.app/Contents/vmd/plugins/noarch/tcl/solvate1.4/wat.psf
+psf file does not contain cross-terms
+reading coordinates from pdb file /Applications/VMD 1.9.1.app/Contents/vmd/plugins/noarch/tcl/solvate1.4/wat.pdb
+Info: writing psf file combine.psf
+total of 27819 atoms
+total of 18557 bonds
+total of 18582 angles
+total of 77 dihedrals
+total of 5 impropers
+total of 0 cross-terms
+Info: psf file complete.
+Info: writing pdb file combine.pdb
+Info: pdb file complete.
+Info) Using plugin psf for structure file combine.psf
+psfplugin) no cross-terms defined in PSF file.
+Info) Analyzing structure ...
+Info)    Atoms: 27819
+Info)    Bonds: 18557
+Info)    Angles: 18582  Dihedrals: 77  Impropers: 5  Cross-terms: 0
+Info)    Bondtypes: 0  Angletypes: 0  Dihedraltypes: 0  Impropertypes: 0
+Info)    Residues: 9262
+Info)    Waters: 9261
+Info)    Segments: 2
+Info)    Fragments: 9262   Protein: 1   Nucleic: 0
+Info) Using plugin pdb for coordinates from file combine.pdb
+Info) Finished with coordinate file combine.pdb.
+Info) generating water residue lists...
+Info) single water residue type, creating residue list...
+Info) replicating 1 water segments, 1 by 1 by 1
+reading topology file /Applications/VMD 1.9.1.app/Contents/vmd/plugins/noarch/tcl/solvate1.4/wat.top
+
+>>>>>> Combined CHARMM All-Hydrogen Topology File for <<<<<<<<<
+>>>>>>>>> CHARMM22 Proteins and CHARMM27 Lipids <<<<<<<<<<
+from
+>>>>>>>>CHARMM22 All-Hydrogen Topology File for Proteins <<<<<<
+>>>>>>>>>>>>>>>>>>>>> August 1999 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>> Direct comments to Alexander D. MacKerell Jr. <<<<<<<<<
+>>>>>> 410-706-7442 or email: alex,mmiris.ab.umd.edu  <<<<<<<<<
+and
+  \\\\\\\ CHARMM27 All-Hydrogen Lipid Topology File ///////
+  \\\\\\\\\\\\\\\\\\ Developmental /////////////////////////
+		Alexander D. MacKerell Jr.
+			August 1999
+ All comments to ADM jr.  email: alex,mmiris.ab.umd.edu
+		telephone: 410-706-7442
+
+Created by CHARMM version 27 1
+building segment WT1
+setting patch for first residue to NONE
+setting patch for last residue to NONE
+Info: generating structure...
+Info: segment complete.
+Info: writing psf file arg_solvated.psf
+total of 5907 atoms
+total of 3949 bonds
+total of 2017 angles
+total of 77 dihedrals
+total of 5 impropers
+total of 0 cross-terms
+Info: psf file complete.
+Info: writing pdb file arg_solvated.pdb
+Info: pdb file complete.
+clearing structure, preserving topology and aliases
+Info) Using plugin psf for structure file arg_solvated.psf
+psfplugin) no cross-terms defined in PSF file.
+Info) Analyzing structure ...
+Info)    Atoms: 5907
+Info)    Bonds: 3949
+Info)    Angles: 2017  Dihedrals: 77  Impropers: 5  Cross-terms: 0
+Info)    Bondtypes: 0  Angletypes: 0  Dihedraltypes: 0  Impropertypes: 0
+Info)    Residues: 1958
+Info)    Waters: 1957
+Info)    Segments: 2
+Info)    Fragments: 1958   Protein: 1   Nucleic: 0
+Info) Using plugin pdb for coordinates from file arg_solvated.pdb
+Info) Finished with coordinate file arg_solvated.pdb.
+Info) Opened coordinate file arg_solvated.pdb for writing.
+Info) Finished with coordinate file arg_solvated.pdb.
+Info) Extra structure overlap safety check...
+Info) Solvate 1.3 completed successfully.
+Info) Using plugin pdb for structure file arg_capped.pdb
+Info) Using plugin pdb for coordinates from file arg_capped.pdb
+Info) Determining bond structure from distance search ...
+Info) Analyzing structure ...
+Info)    Atoms: 36
+Info)    Bonds: 41
+Info)    Angles: 0  Dihedrals: 0  Impropers: 0  Cross-terms: 0
+Info)    Bondtypes: 0  Angletypes: 0  Dihedraltypes: 0  Impropertypes: 0
+Info)    Residues: 1
+Info)    Waters: 0
+Info)    Segments: 1
+Info)    Fragments: 1   Protein: 1   Nucleic: 0
+Info) Finished with coordinate file arg_capped.pdb.
+4
+atomselect6
+Info) Using plugin pdb for structure file arg_solvated.pdb
+Info) Using plugin pdb for coordinates from file arg_solvated.pdb
+Info) Determining bond structure from distance search ...
+Info) Analyzing structure ...
+Info)    Atoms: 5907
+Info)    Bonds: 3955
+Info)    Angles: 0  Dihedrals: 0  Impropers: 0  Cross-terms: 0
+Info)    Bondtypes: 0  Angletypes: 0  Dihedraltypes: 0  Impropertypes: 0
+Info)    Residues: 1958
+Info)    Waters: 1957
+Info)    Segments: 2
+Info)    Fragments: 1958   Protein: 1   Nucleic: 0
+Info) Finished with coordinate file arg_solvated.pdb.
+5
+atomselect7
+atomselect8
+Info) Opened coordinate file arg_solvated.pdb for writing.
+Info) Finished with coordinate file arg_solvated.pdb.
+file7
+{-19.99799919128418 -19.94099998474121 -19.961000442504883} {19.974000930786133 20.0 19.974000930786133}
+-19.99799919128418 -19.94099998474121 -19.961000442504883
+19.974000930786133 20.0 19.974000930786133
+Info) VMD for MACOSXX86, version 1.9.1beta1 (December 29, 2011)
+Info) Exiting normally.
+vmd > 

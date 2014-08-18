@@ -1,0 +1,86 @@
+### Load pdb
+
+mol new asp.pdb
+
+### generate psf
+package require psfgen
+topology /Users/jbardhan/Parameters/top_all27_prot_lipid_more.rtf
+topology top_titr.inp
+
+alias atom ASP H HN
+alias atom ASP HB2 HB1
+alias atom ASP HB3 HB2
+#alias atom GLU HG2 HG1
+#alias atom GLU HG3 HG2
+
+segment A {
+pdb asp.pdb
+mutate 2 JD2
+first ace
+last ct3
+}
+coordpdb asp.pdb A
+
+guesscoord
+
+writepsf asp_capped.psf
+writepdb asp_capped.pdb
+
+package require Orient
+namespace import Orient::orient
+
+set asdf [mol new asp_capped.pdb]
+set sel [atomselect top "all"]
+
+set I [draw principalaxes $sel]
+set A [orient $sel [lindex $I 2] {0 0 1}]
+$sel move $A
+set I [draw principalaxes $sel]
+set A [orient $sel [lindex $I 1] {0 1 0}]
+$sel move $A
+set I [draw principalaxes $sel]
+
+
+set mm [measure minmax $sel]
+set lower [lindex $mm 0]
+set upper [lindex $mm 1]
+set c1 [expr "([lindex $lower 0] + [lindex $upper 0])/2.0"]
+set c2 [expr "([lindex $lower 1] + [lindex $upper 1])/2.0"]
+set c3 [expr "([lindex $lower 2] + [lindex $upper 2])/2.0"]
+set c [expr "{$c1 $c2 $c3}"]
+$sel moveby [vecscale -1 $c]
+
+$sel writepdb asp_capped.pdb
+mol delete $asdf
+package require solvate
+solvate asp_capped.psf asp_capped.pdb -minmax { {-20.0 -20.0 -20.0 } { 20.0 20.0 20.0 } } -o asp_solvated
+
+### beta
+
+set mol1 [mol new asp_capped.pdb]
+set sel1 [atomselect $mol1 "not water"]
+
+set mol2 [mol new asp_solvated.pdb]
+set sel2 [atomselect $mol2 "not water"]
+
+$sel2 set beta [$sel1 get occupancy]
+set all [atomselect $mol2 "all"]
+$all writepdb asp_solvated.pdb
+
+### box size
+
+set outfile [open asp_boxinfo.txt w]
+puts $outfile "Center:"
+puts $outfile [measure center $all]
+puts $outfile "Size:"
+set foo [measure minmax $all]
+set lower [lindex $foo 0]
+set upper [lindex $foo 1]
+puts $outfile [expr "[lindex $upper 0] - [lindex $lower 0]"]
+puts $outfile [expr "[lindex $upper 1] - [lindex $lower 1]"]
+puts $outfile [expr "[lindex $upper 2] - [lindex $lower 2]"]
+
+mol delete $mol1
+mol delete $mol2
+
+quit
